@@ -203,7 +203,7 @@ static char *get_optstr(char *buf, char string[])
 	len = strnlen(string, BUFSIZE);
 	sprintf(search_str, "%s=%%%ds\\n", string, BUFSIZE - len-1);
 	if (1 == sscanf(line, search_str, &temp)) {
-		len = strnlen(temp, 4096);
+		len = strnlen(temp, 4095) + 1;
 		ret_buf = malloc(len);
 		strncpy(ret_buf, temp, len);
 		return ret_buf;
