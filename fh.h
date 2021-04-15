@@ -19,6 +19,7 @@
 #define _FH_H_
 
 #include <inttypes.h>
+#include "ffsb.h"
 
 struct ffsb_thread;
 struct ffsb_fs;
@@ -37,5 +38,6 @@ void fhclose(int, struct ffsb_thread *, struct ffsb_fs *);
 
 int writefile_helper(int, uint64_t, uint32_t, char *, struct ffsb_thread *,
 		     struct ffsb_fs *);
+void fhstat(char *name, ffsb_thread_t *ft, ffsb_fs_t *fs);
 
 #endif /* _FH_H_ */
