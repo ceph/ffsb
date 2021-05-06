@@ -171,7 +171,7 @@ void *construct_ffsb_fs(void *data)
 		printf("checking existing fs: %s\n", fs->basedir);
 		ret = check_existing_fileset(fs);
 		if (ret == NULL) {
-            fprintf(stderr, "Can not reuse filesystem\n");
+            fprintf(stderr, "Can not reuse filesystem");
             exit(1);
 		}
 	} else {
