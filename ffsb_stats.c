@@ -231,6 +231,7 @@ void ffsb_statsd_print(ffsb_statsd_t *fsd)
 		}
 		overall_calls += fsd->num_values[i];
 	}
+#if 0
 	printf("\nDiscrete overall System Call Latency statistics in millisecs\n" "=====\n");
 	printf("\nOverall Calls: %lu\n=====\nValues[ms]:", (unsigned long)overall_calls);
 	uint64_t j;
@@ -243,6 +244,7 @@ void ffsb_statsd_print(ffsb_statsd_t *fsd)
 			printf("\n%05f", (float)fsd->values[i][j] / 1000.0f);
 		}
 	}
+#endif
 }
 
 #if 0 /* Testing */
